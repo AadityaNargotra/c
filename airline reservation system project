@@ -1,0 +1,194 @@
+#include<stdio.h>
+#include<math.h>
+#include<string.h>
+#include<stdlib.h>
+int main(void)
+{
+system("color f2");
+int c,d,p;//c is used to choose a class and p is 
+used to select a seat and d is for destination
+int i;
+int j;
+int s[20]={};
+printf("\n\n 
+***************************************
+*********************** \n");
+printf("\t\tWELCOME TO INDIAN AIR\n 
+");
+printf("\tYOU ARE RIGHT NOW AT THE 
+SEAT BOOKING PORTAL\n");
+printf(" PLEASE PERFORM THE 
+FOLLOWING STEPS TO BOOK YOUR 
+SEAT");
+printf("\n 
+***************************************
+***********************\n\n");
+for (j=0; j<=20; j++)
+{
+ printf(" 
+***************************************
+***********************\n");
+printf(" Destination\n\n [1] Goa\n [2] 
+Mumbai\n [3]Delhi\n [4]Amritsar\n 
+[5]Srinagar\n [6]Bangalore\n");
+printf(" 
+***************************************
+***********************\n");
+printf(" Choose:\n ");
+scanf("%i",&d);
+ printf(" 
+***************************************
+***********************\n");
+printf(" Class\n\n [1] Business Class\n [2] 
+Economic class\n\n");
+printf(" 
+***************************************
+***********************\n");
+printf(" Choose:\n ");
+scanf("%i",&c);
+switch(c)
+{
+case 1:
+ printf(" 
+***************************************
+***********************\n");
+printf(" Business class\n\n");
+printf(" Seats available\n 
+|1|2|3|4|5|6|7|8|9|10|\n\n");
+printf(" 
+***************************************
+***********************\n");
+do
+{
+ printf(" Pick a seat: ");
+ scanf("%i",&p);
+ s[j]=p;
+ for (i=0; i<j; i++)
+ {
+ if (s[j]==s[i])
+ {
+ printf("\n\n Seat already 
+reserved.\n\n");
+ break;
+ }
+ }
+ }
+ while (i!=j);
+ if(s[j] <= 10)
+ {
+ printf(" 
+***************************************
+***********************\n");
+ printf("\n");
+ printf(" Class: Business 
+class\n");
+ printf(" Seat no : %d\n",s[j]);
+ printf(" Booking confirmed\n");
+ printf("\n");
+ }
+ else
+ {
+ printf("\nWrong number! No seat 
+for you!");
+ printf("\nPlease enter a valid seat 
+number\n\n");
+ }
+ break;
+case 2:
+printf(" 
+***************************************
+***********************\n");
+printf(" Economical class\n\n");
+printf(" Seats available\n 
+|11|12|13|14|15|16|17|18|19|20|\n\n");
+printf(" 
+***************************************
+***********************\n");
+do
+{
+ printf(" Pick a seat: ");
+ scanf("%i",&p);
+ s[j]=p;
+ for (i=0; i<j; i++)
+ {
+ if (s[j]==s[i])
+ {
+ printf("\n\n Seat already 
+reserved.\n\n");
+ break;
+ }
+ }
+ }
+ while (i!=j);
+ if(s[j] <= 20)
+ {
+ printf(" 
+***************************************
+***********************\n");
+ printf("\n");
+ printf(" Class: Economical 
+class\n");
+ printf(" Seat no : %d\n",s[j]);
+ printf(" Booking confirmed\n");
+ printf("\n");
+ }
+ else
+ {
+ printf("\nWrong number! No seat 
+for you!");
+ printf("\nPlease enter a valid seat 
+number\n\n");
+ }
+ break;
+ default:
+ break;
+ }
+ switch(d)
+ {
+case 1:
+if(c==1)
+ printf(" Ticket price 10000 INR");
+else
+ printf(" Ticket price 8000 INR");
+ break;
+case 2:
+if(c==1)
+ printf(" Ticket price 15000 INR");
+else
+ printf(" Ticket price 6000 INR");
+ break;
+ case 3:
+if(c==1)
+ printf(" Ticket price 80000 INR");
+else
+ printf(" Ticket price 5000 INR");
+ break;
+ case 4:
+if(c==1)
+ printf(" Ticket price 10000 INR");
+else
+ printf(" Ticket price 4000 INR");
+ break;
+ case 5:
+if(c==1)
+ printf(" Ticket price 70000 INR");
+else
+ printf(" Ticket price 3000 INR");
+ break;
+ case 6:
+if(c==1)
+ printf(" Ticket price 20000 INR");
+else
+ printf(" Ticket price 10000 INR");
+ break;
+ default:
+ printf(" Invalid Input");
+ break;
+ }
+ //end switch case
+ printf("\n THANK YOU FOR VISITING 
+INDIAN AIR\n");
+ printf(" PLEASE VISIT AGAIN\n\n");
+ }//end counting people*/
+return 0;
+}
